@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://darling-marigold-6df5c5.netlify.app)
+- Live Site URL: [Netlify](https://darling-marigold-6df5c5.netlify.app)
 
 ## My process
 
