@@ -1,0 +1,331 @@
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+    content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+html,body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.125rem;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    box-shadow: 0 0 2rem hsl(221, 100%, 92%);
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;    
+}
+
+
+.card-result{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 0 2rem 2rem 0;
+    padding: 2rem 2rem;
+}
+
+h1{
+    font-weight: 700;
+    color: hsl(241, 100%, 89%);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.card-result-circle{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.circle-score{
+    font-size: 4.75rem;
+    font-weight: 800;
+    color: white;
+}
+
+.circle-maxgrade{
+    color: hsla(221, 100%, 96%, 40%);
+}
+
+h3{
+    color: white;
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    width: 87%;
+    color: hsla(241, 100%, 89%, 90%);
+}
+
+.card-summary{
+    width: 50%;
+    padding: 2rem 2rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-flow{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
+
+}
+
+.flex-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.the-icons{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.r-color{
+    background-color: hsl(0, 100%, 98%);
+}
+
+.reaction{
+    color: hsl(0, 100%, 67%);
+}
+
+.m-color{
+    background-color: hsl(39, 100%, 96%);
+}
+
+.memory{
+    color: hsl(39, 100%, 56%);
+}
+
+.ve-color{
+    background-color: hsl(166, 100%, 96%);
+}
+
+.verbal{
+    color: hsl(166, 100%, 37%);
+}
+
+.vi-color{
+    background-color: hsl(234, 85%, 98%);
+}
+
+.visual{
+    color: hsl(234, 85%, 45%);
+}
+
+h2{
+    font-weight: 800;
+    color: hsl(224, 30%, 27%);
+    font-size: 1.5rem;
+}
+
+.sum-score span{
+    color: hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.sum-score::after{
+    content: ' / 100';
+    color: #8D93A1;
+}
+
+
+.btn-cont{
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 64rem;
+    padding: 1rem 0.75rem;
+    text-align: center;
+    color: white;
+    align-items: center; 
+}
+
+.btn-cont:hover{
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 376px) {
+    .card{
+        height: 809px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .card-result{
+        width: 100%;
+        border-radius: 0;
+        height: 45%;
+        border-radius: 0 0 2rem 2rem;
+        padding: 1.125rem 0rem;
+        font-size: 0.825rem;
+    }
+
+    h1{
+        font-size: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    h3{
+        font-size: 1.5rem;
+        margin-bottom: -1.125rem;
+    }
+
+    .card-result-circle{
+        padding: 0;
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 0;
+    }
+
+    .circle-score{
+        font-size: 3rem;
+    }
+
+    .circle-maxgrade{
+        font-size: 1rem;
+    }
+
+    .card-summary{
+        height: 55%;
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    h2{
+        font-size: 1rem;
+        margin-top: -0.5rem;
+        font-weight: 800;
+    }
+
+    .btn-cont{
+        padding: 0.825rem 0;
+    }
+    p{
+        padding: 0 2rem 1.125rem 2rem ;
+    }
+
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <section class="card-result">
+          <h1>Your Result</h1>
+          <div class="card-result-circle">
+            <span class="circle-score">76</span>
+            <span class="circle-maxgrade">of 100</span>
+          </div>
+          <h3>Great</h3>
+          <p>
+            You scored higher than 65% of the people who have taken these tests
+          </p>
+        </section>
+        <section class="card-summary">
+          <h2>Summary</h2>
+          <div class="flex-flow">
+            <div class="flex-group r-color">
+              <div class="the-icons">
+                <img src="assets/images/icon-reaction.svg" alt="reac-img" />
+                <h4 class="reaction">Reaction</h4>
+              </div>
+              <div class="sum-score"><span>80</span></div>
+            </div>
+            <div class="flex-group m-color">
+              <div class="the-icons">
+                <img src="assets/images/icon-memory.svg" alt="mem-img" />
+                <h4 class="memory">Memory</h4>
+              </div>
+              <div class="sum-score"><span>92</span></div>
+            </div>
+            <div class="flex-group ve-color">
+              <div class="the-icons">
+                <img src="assets/images/icon-verbal.svg" alt="ver-img" />
+                <h4 class="verbal">Verbal</h4>
+              </div>
+              <div class="sum-score"><span>61</span></div>
+            </div>
+            <div class="flex-group vi-color">
+              <div class="the-icons">
+                <img src="assets/images/icon-visual.svg" alt="vis-img" />
+                <h4 class="visual">Visual</h4>
+              </div>
+              <div class="sum-score"><span>72</span></div>
+            </div>
+          </div>
+
+          <button class="btn-cont">Continue</button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
