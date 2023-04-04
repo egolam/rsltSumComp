@@ -55,5 +55,3 @@ Users should be able to:
 
 - Frontend Mentor - [@egolam](https://www.frontendmentor.io/profile/egolam)
 - Twitter - [@robot4qbu](https://www.twitter.com/robot4qbu)
-
-## Acknowledgments
