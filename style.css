@@ -136,7 +136,7 @@ h1{
     font-weight: 700;
     color: hsl(241, 100%, 89%);
     margin-bottom: 2rem;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 .card-result-circle{
@@ -152,7 +152,7 @@ h1{
 }
 
 .circle-score{
-    font-size: 4.75rem;
+    font-size: 4rem;
     font-weight: 800;
     color: white;
 }
